@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded',async()=>{
     
     const params = new URLSearchParams(window.location.href)
     const clientsecret = params.get("payment_intent_client_secret")
-    const {paymentIntent} =  await stripe.retrevePaymentIntent(clientsecret)
+    console.log(clientsecret);
+    const {paymentIntent} =  await stripe.retrievePaymentIntent(clientsecret)
 
     // Render the payment intent json
 
